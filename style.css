@@ -28,7 +28,7 @@ body {
 }
 
 .container {
-  max-width: 1100px;
+  max-width: 1120px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -41,6 +41,12 @@ body {
   padding: 10px 0;
   border-bottom: 1px solid #fde68a;
   text-align: center;
+}
+
+.disclaimer-bar a {
+  color: #78350f;
+  font-weight: 700;
+  text-decoration: underline;
 }
 
 /* Navbar */
@@ -82,7 +88,7 @@ body {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 18px;
   flex-wrap: wrap;
 }
 
@@ -90,12 +96,27 @@ body {
   text-decoration: none;
   color: var(--text-dark);
   font-weight: 500;
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   transition: color 0.2s;
 }
 
 .nav-links a:hover {
   color: var(--accent);
+}
+
+.nav-links a.nav-ext-link {
+  color: var(--primary);
+  font-weight: 700;
+  background: #f1f5f9;
+  padding: 5px 11px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+.nav-links a.nav-ext-link:hover {
+  background: var(--accent);
+  color: var(--primary);
+  border-color: var(--accent);
 }
 
 .lang-btn {
@@ -113,12 +134,18 @@ body {
   background: var(--primary-light);
 }
 
-/* Hero */
+/* Hero with Photo Grid */
 .hero {
   background: linear-gradient(135deg, var(--primary) 0%, #163a5c 100%);
   color: var(--white);
-  padding: 80px 0;
-  text-align: center;
+  padding: 72px 0;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 0.85fr;
+  gap: 44px;
+  align-items: center;
 }
 
 .badge {
@@ -135,33 +162,95 @@ body {
 }
 
 .hero h1 {
-  font-size: 2.5rem;
-  max-width: 820px;
-  margin: 0 auto 20px;
+  font-size: 2.35rem;
+  margin-bottom: 20px;
   line-height: 1.25;
 }
 
 .hero-lead {
-  max-width: 720px;
-  margin: 0 auto 32px;
-  font-size: 1.1rem;
+  margin-bottom: 30px;
+  font-size: 1.06rem;
   color: #cbd5e1;
 }
 
 .hero-actions {
   display: flex;
-  justify-content: center;
   gap: 14px;
   flex-wrap: wrap;
 }
 
+/* Photo Card */
+.hero-photo-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.photo-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 14px;
+  max-width: 320px;
+  width: 100%;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.photo-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 8px;
+  display: block;
+}
+
+.photo-fallback {
+  width: 100%;
+  height: 320px;
+  background: #1c446b;
+  border-radius: 8px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #facc15;
+}
+
+.photo-fallback span {
+  font-size: 3.2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.photo-fallback small {
+  color: #cbd5e1;
+  font-size: 0.8rem;
+  margin-top: 6px;
+}
+
+.photo-caption {
+  padding-top: 12px;
+  text-align: center;
+}
+
+.photo-caption strong {
+  display: block;
+  font-size: 1.05rem;
+  color: var(--white);
+}
+
+.photo-caption span {
+  font-size: 0.82rem;
+  color: #facc15;
+}
+
+/* Buttons */
 .btn {
   display: inline-block;
-  padding: 12px 26px;
+  padding: 12px 24px;
   border-radius: 6px;
   text-decoration: none;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.94rem;
   cursor: pointer;
   transition: all 0.2s;
   border: none;
@@ -175,6 +264,15 @@ body {
 .btn-primary:hover {
   background: var(--accent-hover);
   color: var(--white);
+}
+
+.btn-secondary {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.btn-secondary:hover {
+  background: var(--primary-light);
 }
 
 .btn-outline {
@@ -208,6 +306,13 @@ body {
   margin-bottom: 10px;
 }
 
+.section-subtitle {
+  max-width: 680px;
+  margin: 14px auto 0;
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
 .underline {
   width: 60px;
   height: 4px;
@@ -231,17 +336,30 @@ body {
   color: var(--text-dark);
 }
 
-.signature {
+.signature-row {
   margin-top: 24px;
-  padding-top: 16px;
+  padding-top: 18px;
   border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.signature {
   display: flex;
   flex-direction: column;
 }
 
 .signature span {
-  font-size: 0.85rem;
+  font-size: 0.88rem;
   color: var(--text-muted);
+}
+
+.signature a {
+  color: var(--primary);
+  font-weight: 600;
 }
 
 /* Timeline */
@@ -323,6 +441,70 @@ body {
   color: var(--text-muted);
 }
 
+/* Video Lectures Grid */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
+}
+
+.video-card {
+  background: var(--bg-light);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+.video-responsive {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  background: #000;
+}
+
+.video-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video-info {
+  padding: 22px;
+}
+
+.video-tag {
+  display: inline-block;
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--primary);
+  background: #fef3c7;
+  padding: 3px 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.video-info h3 {
+  color: var(--primary);
+  font-size: 1.12rem;
+  margin-bottom: 8px;
+}
+
+.video-info p {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+.youtube-cta {
+  text-align: center;
+  margin-top: 34px;
+}
+
 /* Solidarity */
 .solidarity-section {
   background: var(--primary);
@@ -400,6 +582,20 @@ body {
   margin-bottom: 10px;
 }
 
+.footer-portal-link {
+  display: inline-block;
+  color: #facc15;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid rgba(250, 204, 21, 0.4);
+  padding: 7px 14px;
+  border-radius: 5px;
+}
+
+.footer-portal-link:hover {
+  background: rgba(250, 204, 21, 0.12);
+}
+
 .footer-bottom {
   text-align: center;
   padding-top: 20px;
@@ -407,7 +603,18 @@ body {
   font-size: 0.82rem;
 }
 
-@media (max-width: 768px) {
+.footer-bottom a {
+  color: #cbd5e1;
+}
+
+@media (max-width: 860px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .hero-actions {
+    justify-content: center;
+  }
   .hero h1 {
     font-size: 1.85rem;
   }
