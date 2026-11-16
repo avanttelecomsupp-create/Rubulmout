@@ -33,6 +33,10 @@ body {
   padding: 0 20px;
 }
 
+.text-center {
+  text-align: center;
+}
+
 /* Disclaimer Bar */
 .disclaimer-bar {
   background-color: #fef3c7;
@@ -505,11 +509,10 @@ body {
   margin-top: 34px;
 }
 
-/* Solidarity */
+/* Solidarity Form & Live Wall */
 .solidarity-section {
   background: var(--primary);
   color: var(--white);
-  text-align: center;
 }
 
 .solidarity-section h2 {
@@ -519,20 +522,27 @@ body {
 
 .solidarity-desc {
   max-width: 650px;
-  margin: 0 auto 30px;
+  margin: 0 auto 36px;
   color: #cbd5e1;
+}
+
+.solidarity-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 30px;
+  align-items: start;
+  text-align: left;
 }
 
 .support-box {
   background: rgba(255, 255, 255, 0.07);
   border: 1px solid rgba(255, 255, 255, 0.15);
-  max-width: 480px;
-  margin: 0 auto;
-  padding: 32px;
+  padding: 30px;
   border-radius: 10px;
 }
 
 .counter-display {
+  text-align: center;
   margin-bottom: 22px;
 }
 
@@ -549,6 +559,28 @@ body {
   font-size: 0.9rem;
 }
 
+.solidarity-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.solidarity-form input,
+.solidarity-form textarea {
+  width: 100%;
+  padding: 11px 14px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--text-dark);
+  font-family: inherit;
+  font-size: 0.94rem;
+}
+
+.solidarity-form textarea {
+  resize: vertical;
+}
+
 .btn-large {
   width: 100%;
   font-size: 1.05rem;
@@ -560,6 +592,91 @@ body {
   font-size: 0.9rem;
   color: #86efac;
   min-height: 22px;
+  text-align: center;
+}
+
+.share-row {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.share-btn {
+  background: rgba(255, 255, 255, 0.14);
+  color: var(--white);
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+}
+
+.share-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.messages-panel {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 24px;
+  max-height: 540px;
+  overflow-y: auto;
+}
+
+.messages-panel h3 {
+  color: #facc15;
+  font-size: 1.15rem;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.messages-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.msg-item {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 14px 16px;
+  border-radius: 8px;
+  border-left: 3px solid var(--accent);
+}
+
+.msg-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+  font-size: 0.88rem;
+}
+
+.msg-header strong {
+  color: var(--white);
+}
+
+.msg-header span {
+  color: #facc15;
+  font-size: 0.8rem;
+}
+
+.msg-item p {
+  color: #e2e8f0;
+  font-size: 0.93rem;
+  line-height: 1.5;
+}
+
+.loading-text {
+  color: #cbd5e1;
+  font-size: 0.9rem;
 }
 
 /* Footer */
@@ -608,8 +725,11 @@ body {
 }
 
 @media (max-width: 860px) {
-  .hero-grid {
+  .hero-grid,
+  .solidarity-layout {
     grid-template-columns: 1fr;
+  }
+  .hero-grid {
     text-align: center;
   }
   .hero-actions {
