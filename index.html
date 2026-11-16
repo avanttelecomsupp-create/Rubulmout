@@ -3,21 +3,687 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dr. Rubul Mout — A Tribute to Assamese Scientific Excellence | Avant Groups Initiative</title>
-  <meta name="description" content="An independent tribute by an Assamese entrepreneur celebrating the life, struggles, and global scientific contributions of Dr. Rubul Mout." />
-  <link rel="stylesheet" href="style.css" />
+  <title>Celebrating Dr. Rubul Mout — Assamese Scientific Excellence | Avant Groups Initiative</title>
+  <meta name="description" content="An independent initiative by an Assamese entrepreneur celebrating the life, struggles, and global scientific contributions of Dr. Rubul Mout." />
+
+  <!-- Open Graph / Facebook Link Preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rubulmout.avantgroups.in/" />
+  <meta property="og:title" content="Celebrating Dr. Rubul Mout — From Rural Assam to Harvard & Global Biotechnology" />
+  <meta property="og:description" content="An independent initiative by an Assamese entrepreneur celebrating Dr. Rubul Mout's journey, CRISPR & protein engineering research, and standing in solidarity with Assam's achievers." />
+  <meta property="og:image" content="https://rubulmout.avantgroups.in/rubul-mout.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Celebrating Dr. Rubul Mout — Assamese Scientific Excellence" />
+  <meta name="twitter:description" content="Celebrating the resilience, intellect, and global scientific breakthroughs of Dr. Rubul Mout." />
+  <meta name="twitter:image" content="https://rubulmout.avantgroups.in/rubul-mout.jpg" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+Bengali:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #0f2942;
+      --primary-light: #1c446b;
+      --accent: #c59b27;
+      --accent-hover: #a8821d;
+      --text-dark: #1e293b;
+      --text-muted: #475569;
+      --bg-light: #f8fafc;
+      --white: #ffffff;
+      --border: #e2e8f0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', 'Noto Sans Bengali', sans-serif;
+      color: var(--text-dark);
+      line-height: 1.7;
+      background-color: var(--white);
+    }
+
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Disclaimer Bar */
+    .disclaimer-bar {
+      background-color: #fef3c7;
+      color: #78350f;
+      font-size: 0.85rem;
+      padding: 10px 0;
+      border-bottom: 1px solid #fde68a;
+      text-align: center;
+    }
+
+    .disclaimer-bar a {
+      color: #78350f;
+      font-weight: 700;
+      text-decoration: underline;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 14px 0;
+    }
+
+    .nav-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .brand {
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-main {
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--primary);
+      letter-spacing: 0.5px;
+    }
+
+    .brand-sub {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-dark);
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .nav-links a.nav-ext-link {
+      color: var(--primary);
+      font-weight: 700;
+      background: #f1f5f9;
+      padding: 5px 11px;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+    }
+
+    .nav-links a.nav-ext-link:hover {
+      background: var(--accent);
+      color: var(--primary);
+      border-color: var(--accent);
+    }
+
+    .lang-btn {
+      background: var(--primary);
+      color: var(--white);
+      border: none;
+      padding: 6px 14px;
+      border-radius: 4px;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 0.85rem;
+    }
+
+    .lang-btn:hover {
+      background: var(--primary-light);
+    }
+
+    /* Hero with Photo Grid */
+    .hero {
+      background: linear-gradient(135deg, var(--primary) 0%, #163a5c 100%);
+      color: var(--white);
+      padding: 72px 0;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 0.85fr;
+      gap: 44px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(197, 155, 39, 0.2);
+      border: 1px solid var(--accent);
+      color: #facc15;
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: 2.35rem;
+      margin-bottom: 20px;
+      line-height: 1.25;
+    }
+
+    .hero-lead {
+      margin-bottom: 30px;
+      font-size: 1.06rem;
+      color: #cbd5e1;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    /* Photo Card */
+    .hero-photo-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+
+    .photo-card {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 12px;
+      padding: 14px;
+      max-width: 320px;
+      width: 100%;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    .photo-card img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      object-position: top center;
+      border-radius: 8px;
+      display: block;
+    }
+
+    .photo-fallback {
+      width: 100%;
+      height: 320px;
+      background: #1c446b;
+      border-radius: 8px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #facc15;
+    }
+
+    .photo-fallback span {
+      font-size: 3.2rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    .photo-fallback small {
+      color: #cbd5e1;
+      font-size: 0.8rem;
+      margin-top: 6px;
+    }
+
+    .photo-caption {
+      padding-top: 12px;
+      text-align: center;
+    }
+
+    .photo-caption strong {
+      display: block;
+      font-size: 1.05rem;
+      color: var(--white);
+    }
+
+    .photo-caption span {
+      font-size: 0.82rem;
+      color: #facc15;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.94rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--primary);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      color: var(--white);
+    }
+
+    .btn-secondary {
+      background: var(--primary);
+      color: var(--white);
+    }
+
+    .btn-secondary:hover {
+      background: var(--primary-light);
+    }
+
+    .btn-outline {
+      border: 1.5px solid var(--white);
+      color: var(--white);
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      background: var(--white);
+      color: var(--primary);
+    }
+
+    /* Sections */
+    .section {
+      padding: 70px 0;
+    }
+
+    .bg-light {
+      background-color: var(--bg-light);
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-header h2 {
+      font-size: 1.9rem;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .section-subtitle {
+      max-width: 680px;
+      margin: 14px auto 0;
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    .underline {
+      width: 60px;
+      height: 4px;
+      background: var(--accent);
+      margin: 0 auto;
+      border-radius: 2px;
+    }
+
+    /* Statement Card */
+    .statement-card {
+      background: var(--white);
+      border-left: 5px solid var(--accent);
+      padding: 36px;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .statement-card p {
+      margin-bottom: 18px;
+      font-size: 1.05rem;
+      color: var(--text-dark);
+    }
+
+    .signature-row {
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .signature {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .signature span {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .signature a {
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    /* Timeline */
+    .timeline {
+      position: relative;
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    .timeline-item {
+      display: flex;
+      gap: 22px;
+      margin-bottom: 32px;
+    }
+
+    .timeline-marker {
+      flex-shrink: 0;
+      width: 38px;
+      height: 38px;
+      background: var(--primary);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      margin-top: 4px;
+    }
+
+    .timeline-content {
+      background: var(--bg-light);
+      padding: 22px 26px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      flex: 1;
+    }
+
+    .timeline-content h3 {
+      color: var(--primary);
+      margin-bottom: 8px;
+      font-size: 1.18rem;
+    }
+
+    /* Works Grid */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+    }
+
+    .work-card {
+      background: var(--white);
+      padding: 28px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    }
+
+    .card-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--primary);
+      background: #e2e8f0;
+      padding: 3px 10px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+
+    .work-card h3 {
+      color: var(--primary);
+      font-size: 1.15rem;
+      margin-bottom: 10px;
+    }
+
+    .work-card p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    /* Video Lectures Grid */
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 28px;
+    }
+
+    .video-card {
+      background: var(--bg-light);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+    }
+
+    .video-responsive {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .video-responsive iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .video-info {
+      padding: 22px;
+    }
+
+    .video-tag {
+      display: inline-block;
+      font-size: 0.74rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--primary);
+      background: #fef3c7;
+      padding: 3px 10px;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+
+    .video-info h3 {
+      color: var(--primary);
+      font-size: 1.12rem;
+      margin-bottom: 8px;
+    }
+
+    .video-info p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+    }
+
+    .youtube-cta {
+      text-align: center;
+      margin-top: 34px;
+    }
+
+    /* Solidarity */
+    .solidarity-section {
+      background: var(--primary);
+      color: var(--white);
+      text-align: center;
+    }
+
+    .solidarity-section h2 {
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+
+    .solidarity-desc {
+      max-width: 650px;
+      margin: 0 auto 30px;
+      color: #cbd5e1;
+    }
+
+    .support-box {
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 32px;
+      border-radius: 10px;
+    }
+
+    .counter-display {
+      margin-bottom: 22px;
+    }
+
+    .counter-display span {
+      display: block;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #facc15;
+      line-height: 1.1;
+    }
+
+    .counter-display small {
+      color: #cbd5e1;
+      font-size: 0.9rem;
+    }
+
+    .btn-large {
+      width: 100%;
+      font-size: 1.05rem;
+      padding: 14px;
+    }
+
+    .pledge-msg {
+      margin-top: 14px;
+      font-size: 0.9rem;
+      color: #86efac;
+      min-height: 22px;
+    }
+
+    .share-row {
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .share-btn {
+      background: rgba(255, 255, 255, 0.14);
+      color: var(--white);
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 5px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      cursor: pointer;
+    }
+
+    .share-btn:hover {
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    /* Footer */
+    .footer {
+      background: #091929;
+      color: #94a3b8;
+      padding: 50px 0 20px;
+      font-size: 0.9rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+      margin-bottom: 30px;
+    }
+
+    .footer h4 {
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+
+    .footer-portal-link {
+      display: inline-block;
+      color: #facc15;
+      font-weight: 600;
+      text-decoration: none;
+      border: 1px solid rgba(250, 204, 21, 0.4);
+      padding: 7px 14px;
+      border-radius: 5px;
+    }
+
+    .footer-portal-link:hover {
+      background: rgba(250, 204, 21, 0.12);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 0.82rem;
+    }
+
+    .footer-bottom a {
+      color: #cbd5e1;
+    }
+
+    @media (max-width: 860px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .hero-actions {
+        justify-content: center;
+      }
+      .hero h1 {
+        font-size: 1.85rem;
+      }
+      .statement-card {
+        padding: 24px;
+      }
+    }
+  </style>
 </head>
 <body>
 
   <!-- Top Disclaimer Banner -->
   <div class="disclaimer-bar">
     <div class="container">
-      <p data-en="<strong>Independent Public Tribute:</strong> This portal (rubulmout.avantgroups.in) is a non-commercial solidarity initiative hosted via <a href='https://avantgroups.in' target='_blank' rel='noopener'>AvantGroups.in</a>. It is not officially affiliated with or endorsed by Dr. Rubul Mout."
-         data-as="<strong>স্বতন্ত্ৰ ৰাজহুৱা শ্ৰদ্ধাঞ্জলি:</strong> এই ৱেবছাইটটো (rubulmout.avantgroups.in) <a href='https://avantgroups.in' target='_blank' rel='noopener'>AvantGroups.in</a>-ৰ উদ্যোগত নিৰ্মিত এক অ-বাণিজ্যিক সংহতিমূলক পদক্ষেপ। ড° ৰুবুল মাউটৰ সৈতে ইয়াৰ কোনো আনুষ্ঠানিক সম্পৰ্ক নাই।">
-        <strong>Independent Public Tribute:</strong> This portal (rubulmout.avantgroups.in) is a non-commercial solidarity initiative hosted via <a href="https://avantgroups.in" target="_blank" rel="noopener">AvantGroups.in</a>. It is not officially affiliated with or endorsed by Dr. Rubul Mout.
+      <p data-en="<strong>Independent Public Initiative:</strong> This portal (rubulmout.avantgroups.in) is a non-commercial solidarity platform hosted via <a href='https://avantgroups.in' target='_blank' rel='noopener'>AvantGroups.in</a> to celebrate Assamese scientific excellence. It is not officially affiliated with or endorsed by Dr. Rubul Mout."
+         data-as="<strong>স্বতন্ত্ৰ ৰাজহুৱা পদক্ষেপ:</strong> এই ৱেবছাইটটো (rubulmout.avantgroups.in) <a href='https://avantgroups.in' target='_blank' rel='noopener'>AvantGroups.in</a>-ৰ উদ্যোগত অসমীয়া বৈজ্ঞানিক প্ৰতিভাক সন্মান জনোৱাৰ এক অ-বাণিজ্যিক সংহতিমূলক মঞ্চ। ড° ৰুবুল মাউটৰ সৈতে ইয়াৰ কোনো আনুষ্ঠানিক সম্পৰ্ক নাই।">
+        <strong>Independent Public Initiative:</strong> This portal (rubulmout.avantgroups.in) is a non-commercial solidarity platform hosted via <a href="https://avantgroups.in" target="_blank" rel="noopener">AvantGroups.in</a> to celebrate Assamese scientific excellence. It is not officially affiliated with or endorsed by Dr. Rubul Mout.
       </p>
     </div>
   </div>
@@ -27,7 +693,7 @@
     <div class="container nav-flex">
       <a href="#" class="brand">
         <span class="brand-main">DR. RUBUL MOUT</span>
-        <span class="brand-sub">An Initiative by Avant Groups</span>
+        <span class="brand-sub">Honoring Assamese Excellence • Avant Groups</span>
       </a>
       <nav class="nav-links">
         <a href="#why-this-site" data-en="Why This Matters" data-as="এই পদক্ষেপ কিয়">Why This Matters</a>
@@ -50,9 +716,9 @@
           From a Rural Assamese Village to the Forefront of Global Biotechnology
         </h1>
         <p class="hero-lead"
-           data-en="True excellence deserves celebration, not envy. Dedicated to documenting the resilience, intellect, and groundbreaking research of Dr. Rubul Mout—and standing firmly beside homegrown Assamese achievers."
+           data-en="True excellence deserves celebration, not envy. Dedicated to documenting the resilience, intellect, and ongoing groundbreaking research of Dr. Rubul Mout—and standing firmly beside homegrown Assamese achievers."
            data-as="প্ৰকৃত প্ৰতিভা ঈৰ্ষাৰ নহয়, সন্মানৰ যোগ্য। ড° ৰুবুল মাউটৰ জীৱন সংগ্ৰাম, মেধা আৰু বৈজ্ঞানিক গৱেষণাক বিশ্ব দৰবাৰত তুলি ধৰাৰ এক বিনম্ৰ প্ৰয়াস।">
-          True excellence deserves celebration, not envy. Dedicated to documenting the resilience, intellect, and groundbreaking research of Dr. Rubul Mout—and standing firmly beside homegrown Assamese achievers.
+          True excellence deserves celebration, not envy. Dedicated to documenting the resilience, intellect, and ongoing groundbreaking research of Dr. Rubul Mout—and standing firmly beside homegrown Assamese achievers.
         </p>
         <div class="hero-actions">
           <a href="#lectures" class="btn btn-primary" data-en="Watch Lectures & Talks" data-as="বক্তৃতা চাওক">Watch Lectures & Talks</a>
@@ -157,7 +823,7 @@
         <div class="timeline-item">
           <div class="timeline-marker">4</div>
           <div class="timeline-content">
-            <h3 data-en="Postdoctoral Fellowship at Harvard Medical School & Boston Children's Hospital" data-as="হাৰ্ভাৰ্ড মেডিকেল স্কুলত গৱেষণা">Postdoctoral Fellowship at Harvard Medical School & Boston Children's Hospital</h3>
+            <h3 data-en="Research at Harvard Medical School & Boston Children's Hospital" data-as="হাৰ্ভাৰ্ড মেডিকেল স্কুলত গৱেষণা">Research at Harvard Medical School & Boston Children's Hospital</h3>
             <p data-en="Joining the prestigious laboratory of Dr. George Daley at Harvard Medical School / Boston Children's Hospital, his work expanded into computational protein design, synthetic biology, and engineering immune cells to fight complex cancers."
                data-as="হাৰ্ভাৰ্ড মেডিকেল স্কুল আৰু বষ্টন চিলড্ৰেনছ হস্পিটেলত ড° জৰ্জ ডেলীৰ গৱেষণাগাৰত যোগদান কৰি তেওঁ কৃত্ৰিম প্ৰটিন ডিজাইন আৰু কৰ্কট ৰোগ প্ৰতিৰোধী কোষৰ ওপৰত গৱেষণা আগবঢ়াই নিয়ে।">
               Joining the prestigious laboratory of Dr. George Daley at Harvard Medical School / Boston Children's Hospital, his work expanded into computational protein design, synthetic biology, and engineering immune cells to fight complex cancers.
@@ -244,7 +910,6 @@
         <!-- Video Card 1 -->
         <div class="video-card">
           <div class="video-responsive">
-            <!-- Replace VIDEO_ID_1 with the 11-character YouTube video ID -->
             <iframe src="https://www.youtube.com/embed?listType=search&list=Dr+Rubul+Mout+lecture+science"
                     title="Dr. Rubul Mout Scientific Lecture"
                     loading="lazy"
@@ -264,7 +929,6 @@
         <!-- Video Card 2 -->
         <div class="video-card">
           <div class="video-responsive">
-            <!-- Replace VIDEO_ID_2 with the 11-character YouTube video ID -->
             <iframe src="https://www.youtube.com/embed?listType=search&list=Rubul+Mout+Assamese+interview+Mor+Xopunor+Xodagar"
                     title="Dr. Rubul Mout Inspirational Talk for Students"
                     loading="lazy"
@@ -311,6 +975,12 @@
           I Support Dr. Rubul Mout
         </button>
         <p id="pledge-feedback" class="pledge-msg"></p>
+
+        <!-- Social Share Buttons -->
+        <div class="share-row">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Frubulmout.avantgroups.in" target="_blank" rel="noopener" class="share-btn">Share on Facebook</a>
+          <a href="https://api.whatsapp.com/send?text=Celebrating%20Assamese%20Scientific%20Excellence%20-%20Dr.%20Rubul%20Mout%3A%20https%3A%2F%2Frubulmout.avantgroups.in" target="_blank" rel="noopener" class="share-btn">Share on WhatsApp</a>
+        </div>
       </div>
     </div>
   </section>
@@ -320,9 +990,9 @@
     <div class="container footer-grid">
       <div>
         <h4>rubulmout.avantgroups.in</h4>
-        <p data-en="An independent public tribute initiative conceptualized and hosted by an Assamese entrepreneur to counter negativity with factual recognition."
+        <p data-en="An independent public initiative conceptualized and hosted by an Assamese entrepreneur to counter negativity with factual recognition."
            data-as="নেতিবাচকতাৰ বিৰুদ্ধে তথ্যভিত্তিক স্বীকৃতি দাঙি ধৰিবলৈ এজন অসমীয়া উদ্যোগীয়ে গ্ৰহণ কৰা এক স্বতন্ত্ৰ পদক্ষেপ।">
-          An independent public tribute initiative conceptualized and hosted by an Assamese entrepreneur to counter negativity with factual recognition.
+          An independent public initiative conceptualized and hosted by an Assamese entrepreneur to counter negativity with factual recognition.
         </p>
         <p style="margin-top: 14px;">
           <a href="https://avantgroups.in" target="_blank" rel="noopener" class="footer-portal-link">
@@ -340,6 +1010,52 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Bilingual Toggle (English / Assamese)
+      const langToggleBtn = document.getElementById('lang-toggle');
+      let currentLang = 'en';
+
+      langToggleBtn.addEventListener('click', () => {
+        currentLang = currentLang === 'en' ? 'as' : 'en';
+        langToggleBtn.textContent = currentLang === 'en' ? 'অসমীয়া' : 'English';
+
+        document.querySelectorAll('[data-en]').forEach((el) => {
+          el.innerHTML = el.getAttribute(`data-${currentLang}`);
+        });
+      });
+
+      // 2. Solidarity Pledge Button
+      const pledgeBtn = document.getElementById('pledge-btn');
+      const countEl = document.getElementById('support-count');
+      const feedbackEl = document.getElementById('pledge-feedback');
+
+      let baseCount = 1248;
+      const hasPledged = localStorage.getItem('rubulmout_pledged') === 'true';
+
+      if (hasPledged) {
+        baseCount += 1;
+        countEl.textContent = baseCount.toLocaleString();
+        pledgeBtn.disabled = true;
+        pledgeBtn.style.opacity = '0.75';
+        pledgeBtn.textContent = currentLang === 'en' ? 'Thank You for Standing With Him' : 'সংহতি জনোৱাৰ বাবে ধন্যবাদ';
+      }
+
+      pledgeBtn.addEventListener('click', () => {
+        if (localStorage.getItem('rubulmout_pledged') === 'true') return;
+
+        baseCount += 1;
+        countEl.textContent = baseCount.toLocaleString();
+        localStorage.setItem('rubulmout_pledged', 'true');
+
+        pledgeBtn.disabled = true;
+        pledgeBtn.style.opacity = '0.75';
+        pledgeBtn.textContent = currentLang === 'en' ? 'Thank You for Standing With Him' : 'সংহতি জনোৱাৰ বাবে ধন্যবাদ';
+        feedbackEl.textContent = currentLang === 'en'
+          ? 'Your solidarity has been recorded. Let us celebrate Assam’s achievers.'
+          : 'আপোনাৰ সমৰ্থন নথিভুক্ত কৰা হৈছে। আহক আমি অসমৰ কৃতী সন্তানসকলক সন্মান জনাওঁ।';
+      });
+    });
+  </script>
 </body>
 </html>
