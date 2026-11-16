@@ -1,4 +1,4 @@
-const SCRIPT_URL = "PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzWQCZrcKSVXt3YXxLKV8pDGo3-dx3HIhyeqFuDFCOTbu67z6ANGV09LxwcaTGY1gpjqw/exec";
 const BASE_SUPPORTERS = 1248;
 
 document.addEventListener('DOMContentLoaded', () => {
